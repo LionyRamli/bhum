@@ -24,23 +24,25 @@
           <table class="table table-hover">
               <tr>
                 <th>No</th>
+                <th>Nomor absen</th>
                 <th>Nama Siswa</th>
-                <th>Isi nilai</th>
+                <th>Isi Nilai</th>
                 <th>Opsi</th>
               </tr>
           <?php
-          include 'connect.php';      
+          include 'knk.php';      
           $no= 1;                     
-          $data= mysqli_query($koneksi,"select * from siswa"); 
+          $data= mysqli_query($koneksi,"SELECT * FROM tb_siswa"); 
           while($d = mysqli_fetch_array($data)){                   
           ?>
               <tr>
                   <td><?php echo $no++; ?> </td>
+                  <td><?php echo $d['no_absen']; ?></td>
                   <td><?php echo $d['nama']; ?> </td>
-                  <td><a href="#">isi nilai</a></td>
+                  <td><a href="#">isi</a></td>
                   <td>  
-                      <a href="edit.php?id_siswa=<?php echo $d['id_siswa']; ?>"><img src="pencil.png" width="22px"></a>        
-                      <a href="hapus.php?id_siswa=<?php echo $d['id_siswa']; ?>"><img src="remove.png" width="22px"></a>   
+                      <a href="edit.php?id_siswa=<?php echo $d['id_siswa']; ?>">Edit</a>        
+                      <a href="hapus.php?id_siswa=<?php echo $d['id_siswa']; ?>">Hapus</a>
                       <a href="detail.php?id_siswa=<?php echo $d['id_siswa']; ?>">Detail</a>
                   </td>
               </tr>
