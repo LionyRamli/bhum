@@ -26,6 +26,7 @@
                 <th>No</th>
                 <th>Nomor absen</th>
                 <th>Nama Siswa</th>
+                <th>Isi Nilai</th>
                 <th>Opsi</th>
               </tr>
           <?php
@@ -40,8 +41,9 @@
                   <td><?php echo $d['nama']; ?> </td>
                   <td><a href="#">isi</a></td>
                   <td>  
-                      <a href="edit.php?id_siswa=<?php echo $d['id_siswa']; ?>"></a>        
-                      <a href="hapus.php?id_siswa=<?php echo $d['id_siswa']; ?>"></a>
+                      <a href="edit.php?id_siswa=<?php echo $d['id_siswa']; ?>">Edit</a>        
+                      <a href="hapus.php?id_siswa=<?php echo $d['id_siswa']; ?>">Hapus</a>
+                      <a href="detail.php?id_siswa=<?php echo $d['id_siswa']; ?>">Detail</a>
                   </td>
               </tr>
                   <?php    
