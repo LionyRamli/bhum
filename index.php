@@ -31,16 +31,17 @@
           <?php
           include 'connect.php';      
           $no= 1;                     
-          $data= mysqli_query($koneksi,"select * from tb_siswa"); 
+          $data= mysqli_query($koneksi,"select * from siswa"); 
           while($d = mysqli_fetch_array($data)){                   
           ?>
               <tr>
                   <td><?php echo $no++; ?> </td>
                   <td><?php echo $d['nama']; ?> </td>
-                  <td><a href="#">isi</a></td>
+                  <td><a href="#">isi nilai</a></td>
                   <td>  
-                      <a href="edit.php?id_buku=<?php echo $d['id_buku']; ?>"><img src="pencil.png" width="22px"></a>        
-                      <a href="hapus.php?id_buku=<?php echo $d['id_buku']; ?>"><img src="remove.png" width="22px"></a>
+                      <a href="edit.php?id_siswa=<?php echo $d['id_siswa']; ?>"><img src="pencil.png" width="22px"></a>        
+                      <a href="hapus.php?id_siswa=<?php echo $d['id_siswa']; ?>"><img src="remove.png" width="22px"></a>   
+                      <a href="detail.php?id_siswa=<?php echo $d['id_siswa']; ?>">Detail</a>
                   </td>
               </tr>
                   <?php    
