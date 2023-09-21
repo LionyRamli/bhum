@@ -11,6 +11,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Data Siswa</title>
+    <style>
+        body {
+            background-image: url('OIP.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #333; /* Warna teks */
+            font-family: Arial, sans-serif; /* Jenis huruf */
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .table {
+            background-color: grey;
+            color: white; /* Warna latar belakang tabel */
+        }
+
+        /* Efek hover untuk tombol */
+        .btn:hover {
+            background-color: greenyellow; /* Warna latar belakang hover */
+            color: #fff; /* Warna teks hover */
+        }
+
+        /* Penataan teks dalam tabel */
+        table td, table th {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #333; /* Warna latar belakang footer */
+            color: #fff; /* Warna teks footer */
+            padding: 10px;
+        }
+
+        .margin {
+            margin: 1rex;
+        }
+    </style>
+   
 </head>
 <body>
     <div class="content">
@@ -39,11 +82,11 @@
                   <td><?php echo $no++; ?> </td>
                   <td><?php echo $d['no_absen']; ?></td>
                   <td><?php echo $d['nama']; ?> </td>
-                  <td><a href="#">isi</a></td>
+                  <td><a href="#" class="btn btn-primary">isi</a></td>
                   <td>  
-                      <a href="edit.php?id_siswa=<?php echo $d['id_siswa']; ?>">Edit</a>        
-                      <a href="hapus.php?id_siswa=<?php echo $d['id_siswa']; ?>">Hapus</a>
-                      <a href="detail.php?id_siswa=<?php echo $d['id_siswa']; ?>">Detail</a>
+                      <a href="edit.php?id_siswa=<?php echo $d['id_siswa']; ?> " class="btn btn-info">Edit</a>        
+                      <a href="hapus.php?id_siswa=<?php echo $d['id_siswa']; ?>" class="btn btn-danger margin">Hapus</a>
+                      <a href="detail.php?id_siswa=<?php echo $d['id_siswa']; ?>" class="btn btn-warning">Detail</a>
                   </td>
               </tr>
                   <?php    
@@ -62,3 +105,10 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
