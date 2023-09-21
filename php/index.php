@@ -64,7 +64,7 @@
     </div>
     <div class="container">
         <!-- Konten Anda -->
-        <h2 class="text-center"><b>TABEL DAFTAR BUKU</b></h3>
+        <h2 class="text-center"><b>RAPORT SISWA</b></h3>
         <table class="table table-hover">
             <tr>
                 <th>No</th>
@@ -94,10 +94,36 @@
                 }  
             ?>
         </table>
+              </tr>
+              hksgdhds
+          <?php
+          include 'knk.php';      
+          $no= 1;                     
+          $data= mysqli_query($koneksi,"SELECT * FROM tb_siswa"); 
+          while($d = mysqli_fetch_array($data)){                   
+          ?>
+              <tr>
+                  <td><?php echo $no++; ?> </td>
+                  <td><?php echo $d['no_absen']; ?></td>
+                  <td><?php echo $d['nama']; ?> </td>
+                  <td><a href="#">isi</a></td>
+                  <td>  
+                      <a href="edit.php?id_siswa=<?php echo $d['id_siswa']; ?>">Edit</a>        
+                      <a href="hapus.php?id_siswa=<?php echo $d['id_siswa']; ?>">Hapus</a>
+                      <a href="detail.php?id_siswa=<?php echo $d['id_siswa']; ?>">Detail</a>
+                  </td>
+              </tr>
+                  <?php    
+                     }  
+                  ?>
+          </table>
+        </div>
+        </div>
     </div>
     <div class="footer">
         <p>&copy;2023 Hak Cipta Dilindungi</p>
     </div>
+    <h1>hallo</h1>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
