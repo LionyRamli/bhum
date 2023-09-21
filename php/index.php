@@ -6,60 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Raport Siswa</title>
-    <style>
-        body {
-            background-color: #f0f0f0; /* Warna latar belakang */
-            color: #333; /* Warna teks */
-            font-family: Arial, sans-serif; /* Jenis huruf */
-        }
 
-        .header {
-            background-color: #007BFF; /* Warna header */
-            color: #fff; /* Warna teks header */
-            padding: 20px;
-            text-align: center;
-        }
-
-        .container {
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff; /* Warna latar belakang konten */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan konten */
-            display: flex;
-            justify-content: center;
-
-        }
-
-        .table {
-            background-color: #fff; /* Warna latar belakang tabel */
-        }
-
-        /* Efek hover untuk tombol */
-        .btn:hover {
-            background-color: #007BFF; /* Warna latar belakang hover tombol */
-            color: #fff; /* Warna teks hover tombol */
-        }
-
-        /* Penataan teks dalam tabel */
-        table td, table th {
-            text-align: center;
-            padding: 10px;
-        }
-
-        .footer {
-            text-align: center;
-            background-color: #007BFF; /* Warna latar belakang footer */
-            color: #fff; /* Warna teks footer */
-            padding: 10px;
-
-        
-        }
-    </style>
    
 </head>
 <body>
-    <div class="header">
-        <h1>Raport Siswa</h1>
        
     </div>
     <div class="container">
@@ -85,7 +35,7 @@
                     <td><?php echo $d['nama']; ?> </td>
                     <td><a href="#" class="btn btn-primary">Isi</a></td>
                     <td>  
-                        <a href="edit.php?id_siswa=<?php echo $d['id_siswa']; ?> " class="btn btn-info">Edit</a>        
+                        <a href="edit.php?id_siswa=<?php echo $d['id_siswa']; ?> " class="btn btn-primary">Edit</a>        
                         <a href="hapus.php?id_siswa=<?php echo $d['id_siswa']; ?>" class="btn btn-danger">Hapus</a>
                         <a href="detail.php?id_siswa=<?php echo $d['id_siswa']; ?>" class="btn btn-warning">Detail</a>
                     </td>
