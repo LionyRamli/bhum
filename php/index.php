@@ -29,6 +29,7 @@
                 <th>Isi Nilai</th>
                 <th>Opsi</th>
               </tr>
+              hksgdhds
           <?php
           include 'knk.php';      
           $no= 1;                     
